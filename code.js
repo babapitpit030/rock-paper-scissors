@@ -73,3 +73,13 @@
         let humanScore = 0;
         let computerScore  = 0;
         playGame(1);
+
+
+        const rock = document.querySelector(".rock")
+        const text = document.querySelector(".text")
+
+        rock.addEventListener("click", () => {
+            text.textContent = "You chose Rock"
+          });
+
+
