@@ -48,9 +48,11 @@ button {
 
 .scoreboard-text,
 .humanscore,
-.computerscore {
+.computerscore,
+.score-log {
 
     font-size: 24px;
     font: bold;
 
 }
+

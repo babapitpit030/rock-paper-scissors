@@ -18,35 +18,47 @@
         function playRound(humanChoice, computerChoice) {
 
             if (humanChoice == "rock" && computerChoice == "scissors") {
-                console.log("human wins");
+                scoreLog.textContent = "human wins";
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
             } else if (humanChoice == "rock" && computerChoice == "paper") {
-                console.log("computer wins");
+                scoreLog.textContent = "computer wins";
                 computerScore += 1;
+                scoreComputer.textContent = computerScore;
             } else if (humanChoice == "rock" && computerChoice == "rock") {
-                console.log("draw");
+                scoreLog.textContent = "draw";
                 computerScore += 1;
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
+                scoreComputer.textContent = computerScore;
             } else if (humanChoice == "paper" && computerChoice == "scissors") {
-                console.log("computer wins");
+                scoreLog.textContent = "computer wins";
                 computerScore += 1;
+                scoreComputer.textContent = computerScore;
             } else if (humanChoice == "paper" && computerChoice =="rock") {
-                console.log("human wins");
+                scoreLog.textContent = "human wins";
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
             } else if (humanChoice == "paper" && computerChoice == "paper") {
-                console.log("draw"); 
+                scoreLog.textContent = "draw"; 
                 computerScore += 1;
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
+                scoreComputer.textContent = computerScore;
             } else if (humanChoice == "scissors" && computerChoice == "scissors") {
-                console.log("draw");
+                scoreLog.textContent = "draw";
                 computerScore += 1;
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
+                scoreComputer.textContent = computerScore;
             } else if (humanChoice =="scissors" && computerChoice == "rock") {
-                console.log("computer wins");
+                scoreLog.textContent = "computer wins";
                 computerScore += 1;
+                scoreComputer.textContent = computerScore;
             } else  {
-                console.log("human wins");
+                scoreLog.textContent = "human wins";
                 humanScore += 1;
+                scoreHuman.textContent = humanScore;
 
              }
         }
@@ -71,8 +83,9 @@
         const paper = document.querySelector(".paper")
         const scissors = document.querySelector(".scissors")
         const text = document.querySelector(".text")
-        const scoreHuman = document.querySelector(".humanscore")
-        const scoreComputer = document.querySelector(".computerscore")
+        const scoreLog = document.querySelector(".score-log")
+        let scoreHuman = document.querySelector(".humanscore")
+        let scoreComputer = document.querySelector(".computerscore")
 
         rock.addEventListener("click", () => {
             playGame(1, "rock");
